@@ -6,8 +6,6 @@ This project is a make-friendly, Github Actions CI/CD [batteries included](.gith
 
 I am using it to work through the second edition of Brett Slatkin's [Effective Python](https://effectivepython.com/) book.  See [the tests](tests), which contain pytest files broken out by chapter and item. 
 
-Finally, see the project's [GUIDELINES.md](GUIDELINES.md) doc for more information about the toolchain (python3, black, flake8, mypy, safety, pytest, and nox), and some thoughts on the philosophy behind "opinonated", "hypermodern" Python projects.
-
 ## Useful docs
 
 As documentation, four basic documents are provided: 
