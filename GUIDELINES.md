@@ -21,8 +21,8 @@ If you are a lone dev on a project, maybe all of this isn't for you. But if some
 Michael Pollan [famously authored](https://michaelpollan.com/books/the-omnivores-dilemma/) these three key rules for healthy eating:
 
 * Eat food
-* Not too much
 * Mostly plants
+* Not too much
 
 This project is "vegetarian": Python classes are to be used sparingly. Composition is favored over inheritance, when used. 
 
