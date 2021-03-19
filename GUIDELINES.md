@@ -11,7 +11,10 @@ Run `make thorough` to run your code against all of these tools.
 
 # But, why?
 
-If you are a lone dev on a project, maybe all of this isn't for you. But if someone else is reading or maintaining your code, these tools will provide a solid basis for good-code-hygiene-oriented development.  
+If you are a lone dev on a project, maybe all of this isn't for you. But if someone else is reading or maintaining your code, these tools will provide a solid basis for good-code-hygiene-oriented development. 
+
+![image](https://user-images.githubusercontent.com/216183/111777591-bcc9f980-8870-11eb-825c-8299c07bb49c.png)
+
 
 # Write code, mostly functions, not too much 
 
