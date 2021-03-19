@@ -1,3 +1,5 @@
+import locale
+
 import pytest
 
 
@@ -49,3 +51,26 @@ def test_mixing_up_strs_and_bytes_raises():
 
 def test_bytes_and_strs_are_not_comparable():
     assert "foo" != b"foo"
+
+
+def test_writing_bytes_with_python2_behavior_raises(tmp_path):
+    with pytest.raises(TypeError):
+        with tmp_path.open("data.bin", "w") as f:
+            f.write(b"Not gonna work here anymore")
+
+
+def test_reading_bytes_with_python2_behavior_raises(tmp_path):
+    bin_file = tmp_path / "data.bin"
+    bin_file.write_bytes(b"\xf1\xf2\xf3\xf4\xf5")
+
+    with pytest.raises(UnicodeDecodeError):
+        with bin_file.open("r") as f:
+            _ = f.read()
+
+    # but you can read it in as a legacy windows encoding
+    with bin_file.open("r", encoding="cp1252") as f:
+        assert f.read() == "ñòóôõ"
+
+
+def test_can_verify_locale():
+    assert locale.getpreferredencoding() == "UTF-8"
