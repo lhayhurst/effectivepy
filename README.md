@@ -4,9 +4,15 @@
 
 This project is a make-friendly, Github Actions CI/CD [batteries included](.github/workflows/python-app.yml) starter Python project that combines [Poetry](https://python-poetry.org/docs/) and [Nox](https://nox.thea.codes/en/stable/). It is partially inspired by Claudio Jolowicz's [Hypermodern Python](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/) article series. 
 
+<<<<<<< HEAD
 I am using it to work through the second edition of Brett Slatkin's [Effective Python](https://effectivepython.com/) book.  See [the tests](tests), which contain pytest files broken out by chapter and item. 
 
 Finally, see the project's [GUIDELINES.md](GUIDELINES.md) doc for more information about the toolchain (python3, black, flake8, mypy, safety, pytest, and nox), and some thoughts on the philosophy behind "opinonated", "hypermodern" Python projects.
+=======
+I am using it to work through the second edition of Brett Slatkin's [Effective Python](https://effectivepython.com/) book. The Python stack used here (python3, black, flake8, mypy, safety, pytest, and nox). See [the tests](tests), which contain pytest files broken out by chapter and item. 
+
+Finally, see the project's [GUIDELINES.md](GUIDELINES.md) doc for more information about the toolchain, and its philosophy behind "opinonated", "hypermodern" Python projects.
+>>>>>>> master
 
 ## Getting Started
 
