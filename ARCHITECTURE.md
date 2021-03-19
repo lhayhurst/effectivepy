@@ -6,15 +6,17 @@ This doc is meant to help the reader of this repo wrap their brain around the co
 
 ### Development/Test Stack
 
-[Nox]
------------------------------
-[black, flake8, mypy, pytest]
------------------------------
-[Poetry]
------------------------------
-[Python3]
------------------------------
-[OS of choice]
+From top to bottom:
+* Nox: for running tests on multiple versions of python
+* black, flake8, mypy, pytest: for code formatting, linting, and type checking
+* Poetry: for dependency management 
+-------
+Python3: for the programming language
+--------
+Make: as a convenience, not needed
+-----
+OS of choice:
+-------------
 
 ### Deployed Stack
 

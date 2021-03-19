@@ -15,7 +15,6 @@ def safety(session):
             f"--output={requirements.name}",
             external=True,
         )
-        session.install("safety")
         session.run("safety", "check", f"--file={requirements.name}", "--full-report")
 
 
