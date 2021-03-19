@@ -1,5 +1,7 @@
 from typing import Union
 
+import pytest
+
 
 def test_byte_contain_raw_unsigned_8_bit_values():
     a = b"h\x65llo"
@@ -33,3 +35,24 @@ def test_unicode_sandwich():
 
     assert b"foo" == to_bytes("foo")
     assert b"bar" == to_bytes(b"bar")
+
+
+def test_mixing_up_strs_and_bytes_raises():
+    with pytest.raises(TypeError):
+        _ = "foo" + b"bar"
+
+    with pytest.raises(TypeError):
+        _ = b"foo" + "bar"
+
+    with pytest.raises(TypeError):
+        assert "red" > b"blue"
+
+    with pytest.raises(TypeError):
+        assert b"red" < "blue"
+
+    with pytest.raises(TypeError):
+        b"red %s" % "blue"
+
+
+def test_bytes_and_strs_are_not_comparable():
+    assert "foo" != b"foo"
