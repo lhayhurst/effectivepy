@@ -1,6 +1,7 @@
-from effectivepy.str_helpers import to_bytes, to_str
-
 import pytest
+
+
+from effectivepy.str_helpers import to_bytes, to_str
 
 
 def test_byte_contain_raw_unsigned_8_bit_values():
