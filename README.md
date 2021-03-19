@@ -6,7 +6,7 @@ I am using it to work through the second edition of Brett Slatkin's [Effective P
 
 ## Getting Started
 
-1) Install python3. The [first article] in the series linked above should get you started (he recommends `pyenv`).
+1) Install python3. The [first article]((https://cjolowicz.github.io/posts/hypermodern-python-01-setup/)) in the series linked above should get you started (he recommends `pyenv`).
 
 2) Install `poetry`; see the project homepage or [this article](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/).
 
