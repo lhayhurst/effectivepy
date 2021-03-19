@@ -23,3 +23,19 @@ make deps
 
 This will run `poetry install` and `poetry run nox --install-only`. You can run `make help` to see more make targets. Alternatively, you can just run `poetry`'s CLI; see [the Makefile](Makefile)'s make targets for inspiration. 
 
+```bash
+make clean
+```
+
+Will clean out your install. 
+
+## Configuration
+
+This file has some standard config files:
+
+* The overall project is configured via a [PEP518](https://www.python.org/dev/peps/pep-0518/) [pyproject.toml](pyproject.toml) file. If you fork this repo, you should probably change it. It contains the [black](https://pypi.org/project/black/) settings, and the project dependencies.
+* the [.gitignore](.gitignore) contains obvious gitignores. The `poetry.lock` file is intentionally not commited.
+* the [noxfile.py][noxfile.py] contains nox targets for running `safety` and your `tests`. It uses the [nox-poetry](https://pypi.org/project/nox-poetry/) project for nox-poetry integration.
+* The [.flake8](.flake8) has a minimal [flake8](https://flake8.pycqa.org/en/latest/) configuration.
+* The [mypy.ini](mypy.ini) has a minimal [mypy](http://mypy-lang.org/) configuration.
+* The [pytest.ini](pytest.ini) has a minimal [pytest](https://docs.pytest.org/en/stable/index.html) configuration.

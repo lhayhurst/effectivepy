@@ -23,7 +23,7 @@ cblack:  ## check that it meets black formatting constraints
 
 .PHONY: lint
 lint:  ## run flake8 linter
-	poetry run flake8 src/effectivepy noxfile.py
+	poetry run flake8 $(PYTHONFILES)
 
 .PHONY: blacklint
 blacklint:  cblack lint ## run black and then lint, for full code safety
