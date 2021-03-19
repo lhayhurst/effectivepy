@@ -1,17 +1,17 @@
-# Guidelines of This Repo
+# Guidelines
 
-This repo has an "opinionated" and "safety-first" view on Python code. 
+This file has guidelines for contributing to this repo, which has an "opinionated" and "safety-first" view on Python code. 
 
-* [Safety](https://pypi.org/project/safety/) is used to check for installed dependencies with security vulnerabilities.
-* All code is run through [black](https://pypi.org/project/black/), an "uncompromising code formatter"
+* Opinonated: All code is run through [black](https://pypi.org/project/black/), an "uncompromising code formatter"
 * All code is linted with [flake8](https://flake8.pycqa.org/en/latest/)
 * Static type checking is done with [mypy](http://mypy-lang.org/)
+* [Safety](https://pypi.org/project/safety/) is used to check for installed dependencies with security vulnerabilities.
 
 Run `make thorough` to run your code against all of these tools.
 
 # But, why?
 
-If you are a lone dev on a project, maybe all of this isn't for you. But if someone else is reading or maintaining your code, these tools will provide a good infrastructure for good-code-hygiene-oriented development. 
+If you are a lone dev on a project, maybe all of this isn't for you. But if someone else is reading or maintaining your code, these tools will provide a solid basis for good-code-hygiene-oriented development.  
 
 # Write code, mostly functions, not too much 
 
