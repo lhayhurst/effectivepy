@@ -1,0 +1,50 @@
+
+[tool.poetry]
+name = "effectivepy"
+version = "0.1.0"
+description = "Fork-friendly make/Poetry/nox starter project"
+authors = ["Lyle Hayhurst"]
+license = "MIT"
+readme = "README.md"
+homepage = ""
+repository = "https://github.com/lhayhurst/effectivepy/"
+documentation = "https://hackersandslackers.com/python-poetry/"
+keywords = [
+    "Poetry",
+    "Virtual Environments",
+    "Nox",
+    "Python",
+    "black",
+    "flake8",
+    "mypy",
+    "pytest",
+    "safety"
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+flake8 = "^3.9.0"
+mypy = "^0.812"
+pytest = "^6.2.2"
+pytest-cov = "^2.11.1"
+coverage = "^5.5"
+nox-poetry = "^0.8.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 103
+exclude = '''
+(
+  \.git
+  | \.idea
+  | \.mypy_cache
+  | \.pytest_cache
+  | envs
+)
+'''
