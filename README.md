@@ -48,13 +48,13 @@ This file has some standard config files:
 ## If Forking this project
 Here's a checklist of things to change if you fork this project.
 
-- [] Blow away `src/effectivepy`, or leave it in place if you find it useful, and make a new package, `src/yourpackage`.
-- [] In the [.flake8](.flake8) file, swap out `effectivepy` for your project name.
-- [] In [pyproject.toml](pyproject.toml), replace the project name with your project
-- [] Replace the `repository` url
-- [] Replace the `source` list, or add your own in leaving `src/effectivepy` around
-- [] Re-wrote or updated the project's [README.md](README.md)
-- [] Re-wrote or updated the project's [GUIDELINES.md](GUIDELINES.md)
-- [] Re-wrote or updated the project's [COOKBOOK.md](COOKBOOK.md)
-- [] Re-wrote or updated the project's [ARCHITECTURE.md](ARCHITECTURE.md)
+- [ ] Blow away `src/effectivepy`, or leave it in place if you find it useful, and make a new package, `src/yourpackage`.
+- [ ] In the [.flake8](.flake8) file, swap out `effectivepy` for your project name.
+- [ ] In [pyproject.toml](pyproject.toml), replace the project name with your project
+- [ ] Replace the `repository` url
+- [ ] Replace the `source` list, or add your own in leaving `src/effectivepy` around
+- [ ] Re-wrote or updated the project's [README.md](README.md)
+- [ ] Re-wrote or updated the project's [GUIDELINES.md](GUIDELINES.md)
+- [ ] Re-wrote or updated the project's [COOKBOOK.md](COOKBOOK.md)
+- [ ] Re-wrote or updated the project's [ARCHITECTURE.md](ARCHITECTURE.md)
 
