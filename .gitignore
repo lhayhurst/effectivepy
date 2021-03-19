@@ -1,3 +1,6 @@
+*.tar.gz
+
+*.whl
 
 *.xml
 
@@ -7,13 +10,13 @@ Distutils.egg-info/
 
 *__pycache__*
 
-poetry.lock
-
-dist
+dist/
 
 .pytest_cache
 
 .nox
 
 .mypy_cache
+
+.coverage
 

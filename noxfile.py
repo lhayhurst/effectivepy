@@ -21,6 +21,5 @@ def safety(session):
 
 @session(python=["3.8", "3.7"])
 def tests(session):
-    args = session.posargs or ["tests"]
     session.install("pytest", ".")
-    session.run("pytest", *args)
+    session.run("pytest", *session.posargs)

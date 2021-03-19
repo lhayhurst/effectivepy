@@ -1,4 +1,4 @@
-from typing import Union
+from effectivepy.str_helpers import to_bytes, to_str
 
 import pytest
 
@@ -14,27 +14,19 @@ def test_strings_contain_code_points():
 
 
 def test_unicode_sandwich():
-    def to_str(bytes_or_str: Union[str, bytes]) -> str:
-        if isinstance(bytes_or_str, bytes):
-            return bytes_or_str.decode("utf-8")
-        elif isinstance(bytes_or_str, str):
-            return bytes_or_str
-        else:
-            raise ValueError(f"Unexpected type: {type(bytes_or_str)}")
-
     assert "foo" == to_str("foo")
     assert "bar" == to_str(b"bar")
 
-    def to_bytes(bytes_or_str: Union[str, bytes]) -> bytes:
-        if isinstance(bytes_or_str, str):
-            return bytes_or_str.encode("utf-8")
-        elif isinstance(bytes_or_str, bytes):
-            return bytes_or_str
-        else:
-            raise ValueError(f"Unexpected type: {type(bytes_or_str)}")
-
     assert b"foo" == to_bytes("foo")
     assert b"bar" == to_bytes(b"bar")
+
+
+def test_bad_arg_to_str_helpers_raise():
+    with pytest.raises(ValueError):
+        to_str(1)
+
+    with pytest.raises(ValueError):
+        to_bytes(1)
 
 
 def test_mixing_up_strs_and_bytes_raises():

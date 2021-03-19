@@ -17,41 +17,32 @@ deps:
 black:  ## reformat all files for black. good for when someone else needs to read your code.
 	poetry run black $(PYTHONFILES)
 
-.PHONY: cblack
-cblack:  ## check that it meets black formatting constraints
-	poetry run black $(PYTHONFILES) --check
-
 .PHONY: lint
 lint:  ## run flake8 linter
 	poetry run flake8 $(PYTHONFILES)
 
-.PHONY: blacklint
-blacklint:  cblack lint ## run black and then lint, for full code safety
-
 .PHONY: mypy
 mypy:
-	poetry run mypy src/effectivepy noxfile.py
+	poetry run mypy $(PYTHONFILES)
 
 .PHONY: safety
-safety:  # check for open source vulnerabilities with safety
+safety:  ## check for open source vulnerabilities with safety
 	poetry run nox -rs safety
 
-.PHONY: thorough  # the full treatment: black check, flake8, mypy, and safety
-thorough: safety cblack lint mypy
+.PHONY: thorough
+thorough: safety lint mypy  ## the full treatment: black check, flake8, mypy, and safety
 
 .PHONY: test
-test: blacklint mypy  ## run tests after running black check, flake8, and mypy
+test: mypy  ## run tests after running black check, flake8, and mypy
 	poetry run nox -rs tests
+
+.PHONY: cov
+cov:  ## run test coverage report
+	poetry run pytest tests --cov
 
 .PHONY: clean
 clean:  ## clean up project
-	rm -f MANIFEST
-	rm -rf build dist
-	rm -rf .coverage
-	rm -rf .nox
-	rm -rf poetry.lock
-	rm -rf .mypy_cache
-	rm -rf .pytest_cache
+	rm -rf dist .nox .coverage .mypy_cache .pytest_cache .coverage
 
 
 
