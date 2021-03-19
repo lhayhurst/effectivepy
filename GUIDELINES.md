@@ -1,6 +1,6 @@
 # Guidelines
 
-This file has guidelines for contributing to this repo. 
+This file has guidelines for contributing to this repo 
 
 ## Being a hypermodern Pythonista builder
 
