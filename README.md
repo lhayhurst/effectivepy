@@ -8,15 +8,20 @@ I am using it to work through the second edition of Brett Slatkin's [Effective P
 
 Finally, see the project's [GUIDELINES.md](GUIDELINES.md) doc for more information about the toolchain (python3, black, flake8, mypy, safety, pytest, and nox), and some thoughts on the philosophy behind "opinonated", "hypermodern" Python projects.
 
+## Useful docs
+
+As documentation, four basic documents are provided: 
+1. this [README.md](README.md), 
+2. project [GUIDELINES.md](GUIDELINES.md) that all developers who work on the project agree to uphold, 
+3. an [ARCHITECTURE.md](ARCHITECTURE.md) document helps developers load the project big picture into their mental model, and finally 
+4. a [COOKBOOK.md](COOKBOOK.md) document that answers commonly asked questions/gives useful recipes. 
+
 ## Getting Started
 
-1) Install python3. The [first article]((https://cjolowicz.github.io/posts/hypermodern-python-01-setup/)) in the series linked above should get you started (he recommends `pyenv`).
-
-2) Install `poetry`; see the project homepage or [this article](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/).
-
-3) Clone this repo. 
-   
-4) Build the project. If you prefer make, you can run:
+1. Install python3. The [first article]((https://cjolowicz.github.io/posts/hypermodern-python-01-setup/)) in the series linked above should get you started (he recommends `pyenv`).
+2. Install `poetry`; see the project homepage or [this article](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/).
+3. Clone this repo. 
+4. Build the project. If you prefer make, you can run:
 
 ```bash
 make deps
@@ -39,4 +44,17 @@ This file has some standard config files:
 * the [noxfile.py](noxfile.py) contains nox targets for running `safety` and your `tests`. It uses the [nox-poetry](https://pypi.org/project/nox-poetry/) project for nox-poetry integration.
 * The [.flake8](.flake8) has a minimal [flake8](https://flake8.pycqa.org/en/latest/) configuration.
 * The [mypy.ini](mypy.ini) has a minimal [mypy](http://mypy-lang.org/) configuration.
+
+## If Forking this project
+Here's a checklist of things to change if you fork this project.
+
+- [] Blow away `src/effectivepy`, or leave it in place if you find it useful, and make a new package, `src/yourpackage`.
+- [] In the [.flake8](.flake8) file, swap out `effectivepy` for your project name.
+- [] In [pyproject.toml](pyproject.toml), replace the project name with your project
+- [] Replace the `repository` url
+- [] Replace the `source` list, or add your own in leaving `src/effectivepy` around
+- [] Re-wrote or updated the project's [README.md](README.md)
+- [] Re-wrote or updated the project's [GUIDELINES.md](GUIDELINES.md)
+- [] Re-wrote or updated the project's [COOKBOOK.md](COOKBOOK.md)
+- [] Re-wrote or updated the project's [ARCHITECTURE.md](ARCHITECTURE.md)
 
