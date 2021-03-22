@@ -42,7 +42,7 @@ cov:  ## run test coverage report
 
 .PHONY: clean
 clean:  ## clean up project
-	rm -rf dist .nox .coverage .mypy_cache .pytest_cache .coverage
+	rm -rf dist .nox .coverage .mypy_cache .pytest_cache .coverage src/effectivepy.egg-info
 
 
 
