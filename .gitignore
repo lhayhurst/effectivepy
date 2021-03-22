@@ -20,3 +20,5 @@ dist/
 
 .coverage
 
+src/effectivepy.egg-info
+
