@@ -10,9 +10,9 @@ def test_simple_stride():
 
 
 def test_negative_one_stride_string_reversal_trick():
-    x = b"mongoose"
+    x = b"mongoosed"
     r = x[::-1]
-    assert r == b"esoognom"
+    assert r == b"desoognom"
 
 
 # the reversal trick will raise when the string is encoded as a utf-8 byte string
