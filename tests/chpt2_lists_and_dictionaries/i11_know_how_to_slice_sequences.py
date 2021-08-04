@@ -32,7 +32,7 @@ def test_slicing_creates_copies():
     b = a[:]
     assert b == a and b is not a
 
-    # if you assign to a slice with no start or end indexes, you replace the entire contents of the list
+    # if you assign to a slice with no start or end indexes, you replace the all contents of the list
     # with a copy of what's referenced (instead of allocating a whole new list)
     b = a
     a[:] = [101, 102, 103]
