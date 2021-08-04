@@ -34,3 +34,19 @@ def test_unpack_works_with_starred_expression():
 # def test_unpack_assignment_raises_when_only_starred_expression_is_used():
 #    with pytest.raises(ValueError, match="starred assignment target must be in a list or tuple"):
 #        *stuff = list(range(1, 10))
+
+
+def test_starred_expressions_become_list_instances():
+    short_list = [1, 2]
+    first, second, *rest = short_list
+    assert first == 1
+    assert second == 2
+    assert rest == []
+
+
+def test_unpack_arbitary_iterators():
+    it = iter(range(1, 4))
+    first, second, *rest = it
+    assert first == 1
+    assert second == 2
+    assert rest == [3]
