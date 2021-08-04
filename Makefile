@@ -30,7 +30,7 @@ safety:  ## check for open source vulnerabilities with safety
 	poetry run nox -rs safety
 
 .PHONY: thorough
-thorough: safety lint mypy  ## the full treatment: black check, flake8, mypy, and safety
+thorough: lint mypy  ## the full treatment: black check, flake8, mypy, and safety
 
 .PHONY: test
 test: mypy  ## run tests after running black check, flake8, and mypy
