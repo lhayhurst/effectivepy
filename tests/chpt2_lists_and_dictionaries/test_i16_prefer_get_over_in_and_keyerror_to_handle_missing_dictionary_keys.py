@@ -20,7 +20,6 @@ def test_using_key_error():
 
 def test_using_get():
     d = {"a": 1}
-    assert d.get("a", 0) == 1  # this is the shortest and simplest way
     assert d.get("b", 0) == 0
 
 
