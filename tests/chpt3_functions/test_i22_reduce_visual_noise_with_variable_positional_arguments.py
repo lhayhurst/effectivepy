@@ -38,7 +38,7 @@ def test_simple_better_log_example(capfd):
 
 
 def test_better_log_example_with_values(capfd):
-    better_log("My numbers are", [1, 2])
+    better_log("My numbers are", *[1, 2])
     out, _ = capfd.readouterr()
     assert "My numbers are: 1, 2" in out
 
