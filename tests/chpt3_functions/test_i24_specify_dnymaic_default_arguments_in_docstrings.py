@@ -1,6 +1,7 @@
 # this recipe points out a very important thing that can trip people up in python
 # default arguments are evaluated only ONCE, at program interpret time
 # the convention is to use docstring and None type for this
+import dataclasses
 import re
 from datetime import datetime
 
@@ -31,3 +32,6 @@ def test_log_works_with_provided_arg(capsys):
         r"^foo: hello, world",
     )
     assert regex.match(captured.out)
+
+
+# import dataclasses as dc
