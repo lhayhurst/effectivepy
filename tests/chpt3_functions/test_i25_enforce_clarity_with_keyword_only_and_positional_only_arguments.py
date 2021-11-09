@@ -1,9 +1,7 @@
 import pytest
 
 
-def safe_division(
-    number: int, divisor: int, ignore_overflow: bool, ignore_zero_division: bool
-) -> float:
+def safe_division(number: int, divisor: int, ignore_overflow: bool, ignore_zero_division: bool) -> float:
     try:
         return number / divisor
     except OverflowError:
@@ -32,9 +30,7 @@ def test_safe_division():
 # You can use _keyword-only_ arguments here.
 
 
-def better_safe_division(
-    number: int, divisor: int, *, ignore_overflow=False, ignore_zero_division=False
-):
+def better_safe_division(number: int, divisor: int, *, ignore_overflow=False, ignore_zero_division=False):
     return safe_division(number, divisor, ignore_overflow, ignore_zero_division)
 
 
@@ -50,9 +46,7 @@ def better_safe_division(
 # indicate the demarking line between the positional and the keyword args.
 
 
-def even_better_safe_division(
-    numerator: int, denominator: int, /, *, ignore_overflow=False, ignore_zero_division=False
-):
+def even_better_safe_division(numerator: int, denominator: int, /, *, ignore_overflow=False, ignore_zero_division=False):
     return safe_division(numerator, denominator, ignore_overflow, ignore_zero_division)
 
 

@@ -1,6 +1,6 @@
 [flake8]
 application-import-names = effectivepy,tests
-max-line-length = 103
+max-line-length = 121
 select = ANN,B,B9,BLK,C,E,F,I,S,W
 max-complexity = 10
 ignore = E203, S403, S301
