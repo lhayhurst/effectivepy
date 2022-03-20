@@ -26,6 +26,8 @@ class ToDictMixin:
 
 
 class BinaryTree(ToDictMixin):
+    __slots__ = ["value", "left", "right"]
+
     def __init__(self, value, left=None, right=None):
         self.value = value
         self.left = left
